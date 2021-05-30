@@ -1,0 +1,226 @@
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\addtolength{\topmargin}{-2cm}
+\usepackage{ragged2e}
+\usepackage{footmisc}
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage[maxbibnames=99]{biblatex}
+\defbibenvironment{bibliography}
+{\list
+	{\printtext[labelnumberwidth]{% label format from numeric.bbx
+			\printfield{labelprefix}%
+			\printfield{labelnumber}}}
+	{\setlength{\topsep}{0pt}% layout parameters from moderncvstyleclassic.sty
+		\setlength{\labelwidth}{\hintscolumnwidth}%
+		\setlength{\labelsep}{\separatorcolumnwidth}%
+		\leftmargin\labelwidth%
+		\advance\leftmargin\labelsep}%
+	\sloppy\clubpenalty4000\widowpenalty4000}
+{\endlist}
+{\item}
+\addbibresource{references.bib}
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+\newcommand{\showletter}{}
+\newcommand{\showcv}{}
+
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Daniel} % Your first name
+\familyname{Schmitz} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+\address{Dom-Pedro-Str. 9c}{D-80637 München}
+\mobile{+49 1522 9230414}
+%\phone{(000) 111 1112}
+%\fax{(000) 111 1113}
+\email{daniel.schmitz.public@gmail.com}
+%\homepage{staff.org.edu/~jsmith}{staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+\photo[70pt][0pt]{pictures/PP-Schmitz-741-druck-color.jpg} % TPP-PP-Schmitz-692-druck-color.jpghe first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	
+	%----------------------------------------------------------------------------------------
+	%	COVER LETTER
+	%----------------------------------------------------------------------------------------
+	
+	% To remove the cover letter, comment out this entire block
+	\ifdefined\showletter
+	\clearpage
+	\vspace*{-2cm}
+	\recipient{Dr. Åsa Johansson}{Box 815\\
+		75108 Uppsala\\
+	\textsc{Sweden}} % Letter recipient
+	\date{\today} % Letter date
+	\opening{Dear Dr. Johansson:} % Opening greeting
+	\closing{Yours sincerely,} % Closing phrase
+	%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+	
+	\makelettertitle % Print letter title
+	\justify
+	\thispagestyle{empty}
+	\enlargethispage{45pt}
+	\vspace{-20pt}
+	I am writing to apply for the PhD student position in your research group advertised through Uppsala University's website.
+	I am currently completing my master's degree in bioinformatics at the Ludwig-Maximilians-Universität and Technical University of Munich and expect to graduate in early 2019.
+	
+	During my studies in the field of bioinformatics, I could familiarize myself with a wide array of computational methods enabling modern biological research.
+	I am proficient in statistical analysis using R and Python with a focus on the evaluation of biochemical and genomic data such as next generation sequencing and differential expression analysis as well as the biological reasoning behind them.
+	Additionally, I could gain insights on the modeling and prediction of molecules, components and processes not only on a cellular level but also in the context of systems biology.
+	Thanks to my exceptional performance during my studies, I was awarded a membership in best.in.tum, which is a promotion program of the Technical University's Department of Informatics for the best 2\% of students.
+	
+	During my time in Munich, I started working at the Center for Human Genetics and Laboratory Diagnostics (MVZ), where I continue to be employed to this day.
+	My work there allowed me to gain experience with the application of NGS in a diagnostic setting, especially in the area of rare diseases.
+	In this interdisciplinary setting where I work at the intersection of multiple disciplines, including genomics, physiology and computer science, I was introduced to best practices for the evaluation of high-throughput data and applied my acquired knowledge directly to real clinical information.
+	In addition to working with already established techniques, I was tasked with improving on the analysis pipeline.
+	This included the development of applications enabling and simplifying the integration of multiple data preparation and analysis tools as well as the implementation of efficient, domain-specific evaluation methods.
+	
+	My current research is conducted as part of the Multiple Integration of Data Annotation Study (MIDAS), which is performed by the MVZ in tandem with the TUM School of Medicine.
+	MIDAS explores the possibility of optimizing the diagnostic evaluation of high-throughput data when dealing with rare diseases by integrating additional data sets with the results of already established NGS analyses.
+	This project provided the context of my master's thesis \textit{Syndrome Prediction by Phenotype Similarity and Its Application to Neurodevelopmental Disorders}, which involves the development of a system aiding in the diagnosis of rare diseases by identifying patients similar to each other.	
+	
+	My work in diagnostics has led me to take an interest in the effects genetic variants have on their associated biological processes and affected individuals' health.
+	Upon reading about your research I was very excited about the opportunity to contribute to the knowledge I have been applying in the last years.
+	Thank you for considering my application.
+	I am looking forward to hearing from you.
+	
+	\makeletterclosing % Print letter signature
+	
+	
+	\fi
+	%----------------------------------------------------------------------------------------
+	%	CURRICULUM VITAE
+	%----------------------------------------------------------------------------------------
+	\ifdefined\showcv
+	\newpage
+	\makecvtitle % Print the CV title
+	
+	%----------------------------------------------------------------------------------------
+	%	EDUCATION SECTION
+	%----------------------------------------------------------------------------------------
+	\vspace{-20pt}
+	\cvitem{Date of Birth}{May 3\textsuperscript{rd}, 1995}
+	\cvitem{Place of Birth}{Berlin}
+	
+	\section{Education}
+	
+	\cventry{since 2017}{M.Sc. Bioinformatics}{Ludwig-Maximilians-Universität and Technical University of Munich}{}{Graduation in early 2019}{}  % Arguments not required can be left empty
+	\cventry{2013--2017}{B.Sc. Bioinformatics}{Ludwig-Maximilians-Universität and Technical University of Munich}{}{Grade: 1.6}{}
+	\cventry{2005--2013}{Abitur}{Friedrich-Schiller-Gymnasium Königs Wusterhausen}{}{Grade: 1.0}{}
+	
+	\subsection{Master's Thesis}
+	
+	\cvitem{Title}{\textit{Syndrome Prediction by Phenotype Similarity and Its Application to Neurodevelopmental Disorders}}
+	\cvitem{Supervisors}{Professor Dimitrij Frishman, Chair of Bioinformatics, TUM}
+	%\vspace{-6pt}
+	\cvitem{}{Dr. Sebastian H. Eck, Center for Human Genetics and Laboratory Diagnostics}
+	\cvitem{Description}{I developed a system assisting geneticists in identifying developmental disorders using phenotypic annotations.
+		Annotations are based on terms from the Human Phenotype Ontology. Suggestions are made by comparing each new case to patients with an already existing diagnosis.}
+	
+	%----------------------------------------------------------------------------------------
+	%	WORK EXPERIENCE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\section{Practical Experience}
+	
+	\subsection{Vocational}
+	
+	\cventry{since 2014}{Software Developer/Student Employee}{Center for Human Genetics and Laboratory Diagnostics}{Planegg}{}{%
+		Assisted in performing genetic analyses in a diagnostic setting focusing on rare diseases and neurodevelopmental disorders and developed software improving their outcomes and lowering their costs.
+		\\
+		\\
+		Detailed Achievements:
+		\begin{itemize}
+			\item Supported general diagnostic NGS analyses
+			\item Improved downstream analysis by implementing efficient statistical methods
+			\item Developed applications streamlining the analytic workflow by simplifying the integration of multiple diagnostic tools and databases
+			\item Designed and implemented software for the Multiple Integration of Data Annotation Study, exploring the evaluation of NGS data in a diagnostic setting by integrating data from multiple sources.
+		\end{itemize}
+	}
+	\enlargethispage{20pt}
+	%------------------------------------------------
+	
+	%------------------------------------------------
+	
+	\subsection{Voluntary}
+	
+	\cventry{since 2017}{Head of Membership Administration}{Verein für Corpsstudentische Geschichtsforschung e.V}{}{}{
+		Management of the membership database of a German society concerned with academic history counting 1,100 members.
+	}
+	
+	%----------------------------------------------------------------------------------------
+	%	AWARDS SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\section{Awards}
+	
+	\cventry{2018}{Member of best.in.tum}{}{}{}{Promotion program for the top 2\% of students at the TUM Department of Informatics}
+	%----------------------------------------------------------------------------------------
+	%	COMPUTER SKILLS SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\nocite{gpms, midas}
+	\printbibliography[title={Publications}]
+	
+	%\section{Publications}
+	%\cventry{2018}{MIDAS GPMS: A flexible gene panel management system}{Poster at ESHG}{Milan}{}{}
+	%\cventry{2015}{A software tool for data Integration in a diagnostic laboratory}{Poster at Genome Informatics}{Cold Spring Harbor, NY}{}{}
+	
+	\section{Programming \& Data Analysis Skills}
+	
+	\cvitem{Basic}{Rust}
+	\cvitem{Intermediate}{Perl, UNIX shell}
+	\cvitem{Advanced}{Java, R, Python, SQL, Microsoft Excel, \LaTeX}
+	
+	%----------------------------------------------------------------------------------------
+	%	LANGUAGES SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\section{Languages}
+	
+	
+	\cvdoubleitem{\textbf{German}}{Mothertongue}{\textbf{English}}{Fluent}
+	\cvdoubleitem{\textbf{Spanish}}{Intermediate}{\textbf{French}}{Basic}
+	
+	%----------------------------------------------------------------------------------------
+	%	INTERESTS SECTION
+	%---------------------------------------------------------------------------------------
+	%----------------------------------------------------------------------------------------
+	\section{References}
+	\cvdoubleitem{}{\textbf{Prof. Dr. Volker Heun}\\
+		LFE Bioinformatik\\
+		Institut für Informatik\\
+		Ludwig-Maximilians-Universität\\
+		Amalienstr. 17\\
+		80333 München\\
+		\textsc{Germany}\\[5pt]
+		\href{mailto:Volker.Heun@bio.ifi.lmu.de}{Volker.Heun@bio.ifi.lmu.de}}{}{\textbf{Dr. Sebastian Eck}\\
+		Center for Human Genetics and Laboratory Diagnostics\\
+		Lochhamer Str. 29\\
+		82152 Martinsried\\
+		\textsc{Germany}\\[5pt]
+		\href{mailto:Sebastian.Eck@medizinische-genetik.de}{Sebastian.Eck@medizinische-genetik.de}}
+	
+\textbf{Hayim Malkhasy}\\
+Leiter des Büros der Chemisch-Physikalisch-Technischen Sektion\\
+Max-Planck-Gesellschaft zur Förderung der Wissenschaften e.V.\\
+Generalverwaltung\\
+Hofgartenstr. 8\\
+80539 München\\
+\textsc{Germany}
+	\fi
+\end{document}
