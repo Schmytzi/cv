@@ -14,12 +14,12 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[9pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=0.5cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -137,34 +137,43 @@
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
 
-%% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\cvsection{Professional Summary}
+I recently earned a PhD in medical science with a focus on bioinformatics and genomics in large cohort studies, and I have over four years of experience in medical genetics.
+My expertise includes software development, high-performance computing, and statistics, as well as proficiency in next-generation sequencing (NGS) technologies for research and clinical use.
+I have successfully completed projects through collaboration with diverse teams across various professional and personal backgrounds
 
+\columnratio{0.6}
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Professional Experience}
-
 \cvevent{Researcher}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Mar 2024 -- Present}{Uppsala, Sweden}
+\begin{itemize}
+  \item Prepared material for new precision medicine course
+  \item Contributed to supervision of Master project students
+  \item Advised on machine-learning approaches for research into effects of medication on plasma protein measurements
+\end{itemize}
 \divider
 
 \cvevent{Visiting PhD Student}{National Cancer Institute\\ Laboratory for Bioinformatics and Computational Biology}{Sep 2023 -- Nov 2023}{Rio de Janeiro, Brazil}
-{\small Spatial transcriptomics research of ovarian cancer}
+\begin{itemize}
+  \item International research collaboration on ovarian cancer using spatial transcriptomics
+\end{itemize}
 
 \divider
 
 \cvevent{PhD Candidate}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Sep 2019 -- Feb 2024}{Uppsala, Sweden}
 \begin{itemize}
-  \item Performed computational research in genetic epidemiology of quantitative traits in large cohorts
-  \item Applied technologies incl. whole-genome sequencing, Mendelian Randomization and long-read sequencing
-  \item Poster presentations at AGBT 2022, ASHG 2022 and ESHG 2023 and flash talk at AGBT 2024
+  \item Realized and designed research projects in genomics involving large cohorts and novel technologies in a highly collaborative and diverse group
+  \item Gave 4 poster presentations and 1 flash talk at international conferences
+  \item 340 hours of teaching and supervision of Bachelor and Master students
 \end{itemize}
 \divider
 
 \cvevent{Bioinformatics Assistant, Software Developer}{Center for Human Genetics and Laboratory Diagnostics}{Oct 2014 -- Jul 2019}{Planegg, Germany}
 \begin{itemize}
-  \item Developed patient information management system integrating with NGS workflows
-  \item Assisted in performing diagnostic genetic analyses focused on rare diseases and neurodevelopmental disorders
+  \item Developed patient information management system integrating NGS workflows
+  \item Collaborated closely with other departments involved in diagnostics
   \item Optimized workflows for improved cost and outcomes
 \end{itemize}
 
@@ -179,44 +188,41 @@
 \divider
 
 \cvevent{Secretary}{Medical PhD Student Board}{Jul 2021 -- Jun 2023}{Uppsala, Sweden}
-\divider
-
-\cvevent{Treasurer}{Medical PhD Student Board}{Jul 2021 -- Jun 2022}{Uppsala, Sweden}
+\begin{itemize}
+  \item Familiarized myself with bylaws and initiated their revision
+  \item Prepared and documented meetings and ensured compliance to procedures
+\end{itemize}
 
 \switchcolumn
 \cvsection{Most Proud of}
-
-\cvachievement{\faDatabase}{SweGen T2T-CHM13 Release}{Reanalysis of WGS data from 1,000 individuals using the novel reference T2T-CHM13}
-
-\divider
-
-\cvachievement{\faUsers}{Uppsala Pride 2022}{First pride festival after the COVID-19 pandemic (>3,000 participants)}
+\cvachievement{\faDatabase}{SweGen T2T-CHM13 Release}{Reanalysed WGS data of 1,000 people using the novel reference T2T-CHM13}
 
 \divider
 
-\cvachievement{\faComments}{Queer Regina}{Collaboration bringing local LGBTQ+ art to the theater stage}
+\cvachievement{\faUsers}{Uppsala Pride 2022}{Oversaw the first pride festival after the COVID-19 pandemic (>3,000 attendees)}
 
-\smallskip
+\divider
+
+\cvachievement{\faComments}{Queer Regina}{Initiated collaboration bringing local LGBTQ+ art to the theater stage}
+
 \cvsection{Skills}
 
-\cvtag{Bioinformatics}
+\cvtag{Project management}
 \cvtag{NGS analysis}\\
 \cvtag{Statistics}
 \cvtag{Genomics}
-\cvtag{HPC (Slurm)}
-
+\cvtag{Communication}\\
 \smallskip\divider\smallskip
 
-\cvtag{R}
-\cvtag{Python}
-\cvtag{Java}
-\cvtag{\LaTeX}
-\cvtag{SQL}\\
-\cvtag{UNIX shell}
+\cvtag{Software Development (R, Python, Java)}
+\cvtag{Databases}
+\cvtag{Documentation}
 \cvtag{Nextflow}
-\cvtag{Rust}
+\cvtag{Git}
+\cvtag{\LaTeX}\\
+\cvtag{High-performance computing}
+\cvtag{Containerization}
 
-\smallskip 
 \cvsection{Languages}
 
 \cvskill{German}{5}
@@ -225,9 +231,7 @@
 \smallskip
 \cvskill{Swedish}{4}
 \smallskip
-\cvskill{Portuguese}{3} %% Supports X.5 values.
-
-\medskip
+\cvskill{Portuguese (BR)}{3} %% Supports X.5 values.
 
 \cvsection{Education}
 
@@ -240,9 +244,9 @@ Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Bey
 
 \divider
 
-\cvevent{B.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2013 -- Sep 2017}{}
+\cvevent{B.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2013 -- Aug 2017}{}
 
-\switchcolumn*
+\switchcolumn
 
 \newpage
 
