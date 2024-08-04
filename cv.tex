@@ -14,7 +14,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[9pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[10pt,a4paper,ragged2e,withhyper,normalphoto]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
@@ -47,10 +47,12 @@
 \definecolor{DarkPastelRed}{HTML}{450808}
 \definecolor{PastelRed}{HTML}{8F0D0D}
 \definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{CisariaRed}{RGB}{115, 40, 60}
+\definecolor{CisariaGreen}{RGB}{0, 128, 9}
 \colorlet{name}{black}
 \colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
-\colorlet{headingrule}{GoldenEarth}
+\colorlet{heading}{PastelRed}
+\colorlet{headingrule}{CisariaGreen}
 \colorlet{subheading}{PastelRed}
 \colorlet{accent}{PastelRed}
 \colorlet{emphasis}{SlateGrey}
@@ -98,15 +100,15 @@
 \name{Daniel Schmitz}
 \tagline{Bioinformatician | LGBTQ+ Activist}
 %% You can add multiple photos on the left or right
-%\photoR{2.8cm}{Globe_High}
+\photoR{4cm}{couleur_bearbeitet}
 % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
 \personalinfo{%
   % Not all of these are required!
   \email{daniel@schmytzi.com}
   \phone{+46 70-047 06 04}
-  \mailaddress{Väktargatan 56E}
-  \location{754 22 Uppsala, Sweden}
+  \mailaddress{Asperögatan 8C}
+  \location{SE-414 73 Göteborg}
   \homepage{www.schmytzi.com}
 %  \twitter{@twitterhandle}
   \linkedin{daniel-schmitz-ab0089219}
@@ -137,17 +139,17 @@
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
 
-\cvsection{Professional Summary}
-I recently earned a PhD in medical science with a focus on bioinformatics and genomics in large cohort studies, and I have over four years of experience in medical genetics.
-My expertise includes software development, high-performance computing, and statistics, as well as proficiency in next-generation sequencing (NGS) technologies for research and clinical use.
-I have successfully completed projects through collaboration with diverse teams across various professional and personal backgrounds
+%\cvsection{Professional Summary}
+%I recently earned a PhD in medical science with a focus on bioinformatics and genomics in large cohort studies, and I have over four years of experience in medical genetics.
+%My expertise includes software development, high-performance computing, and statistics, as well as proficiency in next-generation sequencing (NGS) technologies for research and clinical use.
+%I have successfully completed projects through collaboration with diverse teams across various professional and personal backgrounds
 
-\columnratio{0.6}
+\columnratio{0.65}
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Professional Experience}
-\cvevent{Researcher}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Mar 2024 -- Present}{Uppsala, Sweden}
+\cvevent{Assistant with Doctoral Duties}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Mar 2024 -- Present}{Uppsala, Sweden}
 \begin{itemize}
   \item Prepared material for new precision medicine course
   \item Contributed to supervision of Master project students
@@ -157,7 +159,7 @@ I have successfully completed projects through collaboration with diverse teams 
 
 \cvevent{Visiting PhD Student}{National Cancer Institute\\ Laboratory for Bioinformatics and Computational Biology}{Sep 2023 -- Nov 2023}{Rio de Janeiro, Brazil}
 \begin{itemize}
-  \item International research collaboration on ovarian cancer using spatial transcriptomics
+  \item International research collaboration on ovarian cancer genomics
 \end{itemize}
 
 \divider
@@ -167,6 +169,7 @@ I have successfully completed projects through collaboration with diverse teams 
   \item Realized and designed research projects in genomics involving large cohorts and novel technologies in a highly collaborative and diverse group
   \item Gave 4 poster presentations and 1 flash talk at international conferences
   \item 340 hours of teaching and supervision of Bachelor and Master students
+
 \end{itemize}
 \divider
 
@@ -177,41 +180,85 @@ I have successfully completed projects through collaboration with diverse teams 
   \item Optimized workflows for improved cost and outcomes
 \end{itemize}
 
+\newpage
 \cvsection{Voluntary Experience}
 
 \cvevent{Chairperson}{RFSL Uppsala}{Mar 2022 -- Mar 2023}{Uppsala, Sweden}
 \begin{itemize}
   \item Led the local chapter of Sweden's largest LGBTQ+ organization
+  \item Oversaw Uppsala's first pride festival after the COVID-19 pandemic, counting more than 3,000 participants
   \item Represented organization to several news outlets
+  \item Started collaboration bringing local LGBTQ art to the theater stage
 \end{itemize}
 
 \divider
 
-\cvevent{Secretary}{Medical PhD Student Board}{Jul 2021 -- Jun 2023}{Uppsala, Sweden}
+\cvevent{Secretary}{Medical PhD Student Board (Medicinska Doktorandrådet, MDR)}{Jul 2021 -- Jun 2023}{Uppsala, Sweden}
 \begin{itemize}
   \item Familiarized myself with bylaws and initiated their revision
   \item Prepared and documented meetings and ensured compliance to procedures
 \end{itemize}
+\divider
+
+\cvevent{Representative to MDR}{IGP PhD Student Council}{Sep 2019 -- Jun 2023}{Uppsala, Sweden}
+\divider
+
+\cvevent{Treasurer}{Medical PhD Student Board}{Jul 2021 -- Jun 2022}{Uppsala, Sweden}
+\divider
+
+\cvevent{Representative to Uppsala University's PhD Board}{Medical PhD Student Board}{Sep 2019 -- Jun 2022}{Uppsala, Sweden}
+\divider
+
+\cvevent{Head of Election Committee}{Uppsala University's PhD Student Board (Doktorandnämnden)}{Apr 2020 -- Jun 2020}{Uppsala, Sweden}
+\divider
+
+\cvevent{Head of Membership Administration}{Verein für Corpsstudentische Geschichtsforschung e.V.}{Jun 2017 -- Jul 2019}{Munich, Germany}
 
 \switchcolumn
-\cvsection{Most Proud of}
-\cvachievement{\faDatabase}{SweGen T2T-CHM13 Release}{Reanalysed WGS data of 1,000 people using the novel reference T2T-CHM13}
+%\cvsection{Most Proud of}
+%\cvachievement{\faDatabase}{SweGen T2T-CHM13 Release}{Reanalysed WGS data of 1,000 people using the novel reference T2T-CHM13}
+
+%\divider
+
+%\cvachievement{\faUsers}{Uppsala Pride 2022}{Oversaw the first pride festival after the COVID-19 pandemic (>3,000 attendees)}
+
+%\divider
+
+%\cvachievement{\faComments}{Queer Regina}{Initiated collaboration bringing local LGBTQ+ art to the theater stage}
+
+\cvsection{Education}
+
+\cvevent{Ph.D.\ in Medical Science}{Uppsala University}{Sep 2019 -- Feb 2024}{}
+Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Beyond GWAS: Novel Methods and Resources for Genetic Epidemiology}}
 
 \divider
 
-\cvachievement{\faUsers}{Uppsala Pride 2022}{Oversaw the first pride festival after the COVID-19 pandemic (>3,000 attendees)}
+\cvevent{M.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2017 -- Dec 2018}{}
+Grade: 1.5
 
 \divider
 
-\cvachievement{\faComments}{Queer Regina}{Initiated collaboration bringing local LGBTQ+ art to the theater stage}
+\cvevent{B.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2013 -- Aug 2017}{}
+Grade: 1.6
+
+\divider
+
+\cvevent{Abitur}{Friedrich-Schiller-Gymnasium Königs Wusterhausen}{Aug 2005 -- Jun 2013}{}
+Grade: 1.0
+
+\cvsection{Awards}
+\cvevent{best.in.tum}{Technical University of Munich}{Oct 2018}{}
+Awarded to the top 2\% of graduates at the TUM School of Computation, Information and Technology
+
+\newpage
 
 \cvsection{Skills}
 
 \cvtag{Project management}
 \cvtag{NGS analysis}\\
 \cvtag{Statistics}
-\cvtag{Genomics}
-\cvtag{Communication}\\
+\cvtag{Genomics}\\
+%\cvtag{Communication}\\
 \smallskip\divider\smallskip
 
 \cvtag{Software Development (R, Python, Java)}
@@ -219,9 +266,9 @@ I have successfully completed projects through collaboration with diverse teams 
 \cvtag{Documentation}
 \cvtag{Nextflow}
 \cvtag{Git}
-\cvtag{\LaTeX}\\
+\cvtag{\LaTeX}
+\cvtag{Containerization}\\
 \cvtag{High-performance computing}
-\cvtag{Containerization}
 
 \cvsection{Languages}
 
@@ -233,24 +280,10 @@ I have successfully completed projects through collaboration with diverse teams 
 \smallskip
 \cvskill{Portuguese (BR)}{3} %% Supports X.5 values.
 
-\cvsection{Education}
+%\switchcolumn
 
-\cvevent{Ph.D.\ in Medical Science}{Uppsala University}{Sep 2019 -- Feb 2024}{}
-Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Beyond GWAS: Novel Methods and Resources for Genetic Epidemiology}}
 
-\divider
-
-\cvevent{M.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2017 -- Dec 2018}{}
-
-\divider
-
-\cvevent{B.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2013 -- Aug 2017}{}
-
-\switchcolumn
-
-\newpage
-
-\cvsection{Publications}
+%\cvsection{Publications}
 
 %% Specify your last name() and first name(s) as given in the .bib to automatically bold your own name in the publications list.
 %% One caveat: You need to write \bibnamedelima where there's a space in your name for this to work properly; or write \bibnamedelimi if you use initials in the .bib
@@ -260,30 +293,36 @@ Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Bey
 
 \nocite{*}
 
-\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+%\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
 
-\switchcolumn
+%\switchcolumn
 
-\cvsection{Grants}
-\cvachievement{2023}{}{}
-\cvachievement{}{Rönnows Resestipendium}{SEK 40,000}
-\cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 45,000}
-
-\divider
-
-\cvachievement{2022}{}{}
-\cvachievement{}{Rudbergs, A och M}{SEK 79,441}
-\cvachievement{}{Bergmark Travel}{SEK 34,605}
-
-\divider
-
-\cvachievement{2021}{}{}
-\cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 38,680}
-
-\divider
-
-\cvachievement{2020}{}{}
-\cvachievement{}{Sederholms, utrikes}{SEK 19,000}
-
+%\cvsection{Grants}
+%\cvachievement{2023}{}{}
+%\cvachievement{}{Rönnows Resestipendium}{SEK 40,000}
+%\cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 45,000}
+%
+%\divider
+%
+%\cvachievement{2022}{}{}
+%\cvachievement{}{Rudbergs, A och M}{SEK 79,441}
+%\cvachievement{}{Bergmark Travel}{SEK 34,605}
+%
+%\divider
+%
+%\cvachievement{2021}{}{}
+%\cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 38,680}
+%
+%\divider
+%
+%\cvachievement{2020}{}{}
+%\cvachievement{}{Sederholms, utrikes}{SEK 19,000}
+%
 \end{paracol}
+
+\vfill
+Göteborg, \today
+
+\vspace{12pt}
+\includegraphics*[height=30pt]{signature.png}
 \end{document}

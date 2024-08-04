@@ -1,0 +1,18 @@
+\documentclass[a4paper,11pt]{scrartcl}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+\usepackage[backend=biber,style=iso-authoryear,sorting=ydnt,maxbibnames=999]{biblatex}
+\setlength{\bibhang}{1.25em}
+\DeclareFieldFormat{labelnumberwidth}{\makebox[\bibhang][l]{\itemmarker}}
+\setlength{\biblabelsep}{0pt}
+\defbibheading{pubtype}{\cvsubsection{#1}}
+\AtEveryBibitem{%
+  \iffieldundef{doi}{}{\clearfield{url}}%
+}
+\addbibresource{sample.bib}
+
+\begin{document}
+
+\nocite{*}
+\printbibliography[title={Publikationsliste},type=article]
+\end{document}
