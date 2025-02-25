@@ -14,7 +14,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper,ragged2e,withhyper,normalphoto]{altacv}
+\documentclass[9pt,a4paper,ragged2e,withhyper,normalphoto]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
@@ -149,7 +149,16 @@
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Professional Experience}
-\cvevent{Assistant with Doctoral Duties}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Mar 2024 -- Present}{Uppsala, Sweden}
+\cvevent{Bioinformatician}{University of Gothenburg}{Sep 2024 -- present}{Gothenburg, Sweden}
+Responsibilities:
+\begin{itemize}
+  \item Maintaining, developing sequencing-based analyses for rare-disease diagnostics
+  \item Establishing long-read sequencing-based analysis pipeline for diseases
+  \item Bioinformatics support for researchers
+\end{itemize}
+\divider
+
+\cvevent{Assistant with Doctoral Duties}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Mar 2024 -- Sep 2024}{Uppsala, Sweden}
 \begin{itemize}
   \item Prepared material for new precision medicine course
   \item Contributed to supervision of Master project students
@@ -180,8 +189,13 @@
   \item Optimized workflows for improved cost and outcomes
 \end{itemize}
 
-\newpage
 \cvsection{Voluntary Experience}
+
+\cvevent{Volunteer}{RFSL Göteborg}{Sep 2024 -- present}{Gothenburg, Sweden}
+\begin{itemize}
+  \item Supporting LGBTQ+ migrants through career mentorship and social activities
+\end{itemize}
+\divider
 
 \cvevent{Chairperson}{RFSL Uppsala}{Mar 2022 -- Mar 2023}{Uppsala, Sweden}
 \begin{itemize}
@@ -324,5 +338,5 @@ Awarded to the top 2\% of graduates at the TUM School of Computation, Informatio
 Göteborg, \today
 
 \vspace{12pt}
-\includegraphics*[height=30pt]{signature.png}
+%\includegraphics*[height=60pt]{signature.png}
 \end{document}
