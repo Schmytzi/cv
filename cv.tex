@@ -14,7 +14,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[9pt,a4paper,ragged2e,withhyper]{altacv}
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
@@ -42,17 +42,21 @@
 \fi
 
 % Change the colours if you want to
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
+\definecolor{SlateGrey}{HTML}{1E1E1E}
+\definecolor{LightGrey}{HTML}{444444}
 \definecolor{DarkPastelRed}{HTML}{450808}
 \definecolor{PastelRed}{HTML}{8F0D0D}
 \definecolor{GoldenEarth}{HTML}{E7D192}
-\colorlet{name}{black}
-\colorlet{tagline}{PastelRed}
-\colorlet{heading}{DarkPastelRed}
-\colorlet{headingrule}{GoldenEarth}
-\colorlet{subheading}{PastelRed}
-\colorlet{accent}{PastelRed}
+\definecolor{DarkPurple}{HTML}{38062B}
+\definecolor{AtomicTangerine}{HTML}{F7A072}
+\definecolor{Honeydew}{HTML}{DFF3E3}
+\definecolor{Byzantium}{HTML}{6F0B56}
+\colorlet{name}{DarkPurple}
+\colorlet{tagline}{Byzantium}
+\colorlet{heading}{DarkPurple}
+\colorlet{headingrule}{AtomicTangerine}
+\colorlet{subheading}{Byzantium}
+\colorlet{accent}{Byzantium}
 \colorlet{emphasis}{SlateGrey}
 \colorlet{body}{LightGrey}
 
@@ -105,8 +109,8 @@
   % Not all of these are required!
   \email{daniel@schmytzi.com}
   \phone{+46 70-047 06 04}
-  \mailaddress{Väktargatan 56E}
-  \location{754 22 Uppsala, Sweden}
+  \mailaddress{Asperögatan 8C}
+  \location{414 73 Göteborg, Sweden}
   \homepage{www.schmytzi.com}
 %  \twitter{@twitterhandle}
   \linkedin{daniel-schmitz-ab0089219}
@@ -137,17 +141,26 @@
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
 
-\cvsection{Professional Summary}
-I recently earned a PhD in medical science with a focus on bioinformatics and genomics in large cohort studies, and I have over four years of experience in medical genetics.
-My expertise includes software development, high-performance computing, and statistics, as well as proficiency in next-generation sequencing (NGS) technologies for research and clinical use.
-I have successfully completed projects through collaboration with diverse teams across various professional and personal backgrounds
+%\cvsection{Professional Summary}
+%I recently earned a PhD in medical science with a focus on bioinformatics and genomics in large cohort studies, and I have over four years of experience in medical genetics.
+%My expertise includes software development, high-performance computing, and statistics, as well as proficiency in next-generation sequencing (NGS) technologies for research and clinical use.
+%I have successfully completed projects through collaboration with diverse teams across various professional and personal backgrounds
 
 \columnratio{0.6}
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Professional Experience}
-\cvevent{Researcher}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Mar 2024 -- Present}{Uppsala, Sweden}
+\cvevent{Bioinformatician}{University of Gothenburg\\Bioinformatics and Data Centre, Core Facilities}{Sep 2024 - Present}{Gothenburg, Sweden}
+Responsibilities:
+\begin{itemize}
+  \item Implementing analysis pipeline for clinical long-read sequencing intended to be used nationwide.
+  \item Developing and performing bioinformatics analyses for diverse research projects as part of scientific support services
+  \item Maintaining and supporting Sahlgrenska Hospital's routine whole-genome analyses for rare diseases
+\end{itemize}
+\divider
+
+\cvevent{Researcher}{Uppsala University\\ Department of Immunology, Genetics and Pathology}{Mar 2024 -- Sep 2024}{Uppsala, Sweden}
 \begin{itemize}
   \item Prepared material for new precision medicine course
   \item Contributed to supervision of Master project students
@@ -212,14 +225,14 @@ I have successfully completed projects through collaboration with diverse teams 
 \cvtag{Statistics}
 \cvtag{Genomics}
 \cvtag{Communication}\\
-\smallskip\divider\smallskip
+% \smallskip\divider\smallskip
 
 \cvtag{Software Development (R, Python, Java)}
 \cvtag{Databases}
 \cvtag{Documentation}
 \cvtag{Nextflow}
 \cvtag{Git}
-\cvtag{\LaTeX}\\
+\cvtag{\LaTeX}
 \cvtag{High-performance computing}
 \cvtag{Containerization}
 
@@ -248,8 +261,6 @@ Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Bey
 
 \switchcolumn
 
-\newpage
-
 \cvsection{Publications}
 
 %% Specify your last name() and first name(s) as given in the .bib to automatically bold your own name in the publications list.
@@ -260,7 +271,7 @@ Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Bey
 
 \nocite{*}
 
-\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+\printbibliography[heading=none,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
 
 \switchcolumn
 
