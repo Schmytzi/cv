@@ -19,7 +19,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=0.5cm}
+\geometry{left=1.25cm,right=1.25cm,top=1.25cm,bottom=1.25cm,columnsep=0.5cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -141,22 +141,22 @@
 %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
 \AtBeginEnvironment{itemize}{\small}
 
-%\cvsection{Professional Summary}
-%I recently earned a PhD in medical science with a focus on bioinformatics and genomics in large cohort studies, and I have over four years of experience in medical genetics.
-%My expertise includes software development, high-performance computing, and statistics, as well as proficiency in next-generation sequencing (NGS) technologies for research and clinical use.
-%I have successfully completed projects through collaboration with diverse teams across various professional and personal backgrounds
+\cvsection{Professional Summary}
+Bioinformatician with a PhD in medical science focusing on genomics in large cohorts with over five years of experience in medical genetics.
+Highly proficient with current sequencing technologies, software development, automation, high-performance computing, and statistics.
+Demonstrated collaborative and organizational skills in projects with diverse teams in research, clinic and voluntary work.
 
 \columnratio{0.6}
 % Start a 2-column paracol. Both the left and right columns will automatically
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Professional Experience}
-\cvevent{Bioinformatician}{University of Gothenburg\\Bioinformatics and Data Centre, Core Facilities}{Sep 2024 - Present}{Gothenburg, Sweden}
-Responsibilities:
+\cvevent{Bioinformatician}{University of Gothenburg\\Bioinformatics and Data Centre, Core Facilities}{Sep 2024 -- Present}{Gothenburg, Sweden}
 \begin{itemize}
-  \item Implementing analysis pipeline for clinical long-read sequencing intended to be used nationwide.
-  \item Developing and performing bioinformatics analyses for diverse research projects as part of scientific support services
-  \item Maintaining and supporting Sahlgrenska Hospital's routine whole-genome analyses for rare diseases
+  \item Responsible for implementation of long-read sequencing analysis pipeline for Sahlgrenska University Hospital
+  \item Maintained and improved routine WGS analyses for rare diseases
+  \item Performed data analysis for various genomics research projects
+  \item Organized long-read data visualization workshop for national conference
 \end{itemize}
 \divider
 
@@ -164,13 +164,12 @@ Responsibilities:
 \begin{itemize}
   \item Prepared material for new precision medicine course
   \item Contributed to supervision of Master project students
-  \item Advised on machine-learning approaches for research into effects of medication on plasma protein measurements
 \end{itemize}
 \divider
 
 \cvevent{Visiting PhD Student}{National Cancer Institute\\ Laboratory for Bioinformatics and Computational Biology}{Sep 2023 -- Nov 2023}{Rio de Janeiro, Brazil}
 \begin{itemize}
-  \item International research collaboration on ovarian cancer using spatial transcriptomics
+  \item Research collaboration on ovarian cancer using spatial transcriptomics
 \end{itemize}
 
 \divider
@@ -185,12 +184,75 @@ Responsibilities:
 
 \cvevent{Bioinformatics Assistant, Software Developer}{Center for Human Genetics and Laboratory Diagnostics}{Oct 2014 -- Jul 2019}{Planegg, Germany}
 \begin{itemize}
-  \item Developed patient information management system integrating NGS workflows
+  \item Developed patient information management system for NGS workflows
   \item Collaborated closely with other departments involved in diagnostics
   \item Optimized workflows for improved cost and outcomes
 \end{itemize}
 
+\switchcolumn
+\vskip 2.75pt
+\cvsection{Most Proud of}
+\cvachievement{\faDatabase}{SweGen T2T-CHM13 Release}{Reanalysed WGS data of 1,000 people using the novel reference T2T-CHM13}
+
+\divider
+
+\cvachievement{\faCogs}{Nallo}{Co-developed Sweden's national long-read WGS pipeline for rare diseases}
+
+\divider
+
+\cvachievement{\faUsers}{Uppsala Pride 2022}{Oversaw the first pride festival after the COVID-19 pandemic (>3,000 attendees)}
+
+\cvsection{Skills}
+
+\cvtag{Project management}
+\cvtag{Statistics}
+\cvtag{Genomics}
+\cvtag{Communication}
+\cvtag{Databases}
+\cvtag{Automation}
+\cvtag{Software integration}
+\cvtag{Documentation}
+\cvtag{Nextflow}
+\cvtag{Python}
+\cvtag{Java}
+\cvtag{Git}
+\cvtag{\LaTeX}
+%\cvtag{High-performance computing}
+
+\cvsection{Languages}
+
+\cvskill{German}{5}
+\smallskip
+\cvskill{English}{4.5}
+\smallskip
+\cvskill{Swedish}{4}
+\smallskip
+\cvskill{Portuguese (Brazil)}{3} %% Supports X.5 values.
+
+\cvsection{Education}
+
+\cvevent{Ph.D.\ in Medical Science}{Uppsala University}{Sep 2019 -- Feb 2024}{}
+Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Beyond GWAS: Novel Methods and Resources for Genetic Epidemiology}}
+
+\divider
+
+\cvevent{M.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2017 -- Dec 2018}{}
+
+\divider
+
+\cvevent{B.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2013 -- Aug 2017}{}
+
+% \end{paracol}
+\switchcolumn
 \cvsection{Voluntary Experience}
+
+\cvevent{Volunteer}{RFSL Gothenburg}{Sep 2024 -- Present}{Gothenburg, Sweden}
+\begin{itemize}
+  \item Supported LGBTQ+ migrants and refugees as part of the \textit{Newcomers} project
+  \item Assisted with job applications and CV writing
+\end{itemize}
+
+\divider
 
 \cvevent{Chairperson}{RFSL Uppsala}{Mar 2022 -- Mar 2023}{Uppsala, Sweden}
 \begin{itemize}
@@ -206,60 +268,6 @@ Responsibilities:
   \item Prepared and documented meetings and ensured compliance to procedures
 \end{itemize}
 
-\switchcolumn
-\cvsection{Most Proud of}
-\cvachievement{\faDatabase}{SweGen T2T-CHM13 Release}{Reanalysed WGS data of 1,000 people using the novel reference T2T-CHM13}
-
-\divider
-
-\cvachievement{\faUsers}{Uppsala Pride 2022}{Oversaw the first pride festival after the COVID-19 pandemic (>3,000 attendees)}
-
-\divider
-
-\cvachievement{\faComments}{Queer Regina}{Initiated collaboration bringing local LGBTQ+ art to the theater stage}
-
-\cvsection{Skills}
-
-\cvtag{Project management}
-\cvtag{NGS analysis}\\
-\cvtag{Statistics}
-\cvtag{Genomics}
-\cvtag{Communication}\\
-% \smallskip\divider\smallskip
-
-\cvtag{Software Development (R, Python, Java)}
-\cvtag{Databases}
-\cvtag{Documentation}
-\cvtag{Nextflow}
-\cvtag{Git}
-\cvtag{\LaTeX}
-\cvtag{High-performance computing}
-\cvtag{Containerization}
-
-\cvsection{Languages}
-
-\cvskill{German}{5}
-\smallskip
-\cvskill{English}{4.5}
-\smallskip
-\cvskill{Swedish}{4}
-\smallskip
-\cvskill{Portuguese (BR)}{3} %% Supports X.5 values.
-
-\cvsection{Education}
-
-\cvevent{Ph.D.\ in Medical Science}{Uppsala University}{Sep 2019 -- Feb 2024}{}
-Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Beyond GWAS: Novel Methods and Resources for Genetic Epidemiology}}
-
-\divider
-
-\cvevent{M.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2017 -- Dec 2018}{}
-
-\divider
-
-\cvevent{B.Sc.\ in Bioinformatics}{Ludwig-Maximilians-Universität,\\Technical University of Munich}{Oct 2013 -- Aug 2017}{}
-
-\switchcolumn
 
 \cvsection{Publications}
 
@@ -269,32 +277,32 @@ Thesis: \href{https://urn.kb.se/resolve?urn=urn:nbn:se:uu:diva-517196}{\emph{Bey
 \mynames{Schmitz/Daniel}
 %% MAKE SURE THERE IS NO SPACE AFTER THE FINAL NAME IN YOUR \mynames LIST
 
-\nocite{*}
+\nocite{Schmitz2023,Schmitz01112025,johansson2022,Schmitz2021}
 
 \printbibliography[heading=none,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
 
-\switchcolumn
+%\switchcolumn
 
-\cvsection{Grants}
-\cvachievement{2023}{}{}
-\cvachievement{}{Rönnows Resestipendium}{SEK 40,000}
-\cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 45,000}
-
-\divider
-
-\cvachievement{2022}{}{}
-\cvachievement{}{Rudbergs, A och M}{SEK 79,441}
-\cvachievement{}{Bergmark Travel}{SEK 34,605}
-
-\divider
-
-\cvachievement{2021}{}{}
-\cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 38,680}
-
-\divider
-
-\cvachievement{2020}{}{}
-\cvachievement{}{Sederholms, utrikes}{SEK 19,000}
+% \cvsection{Grants}
+% \cvachievement{2023}{}{}
+% \cvachievement{}{Rönnows Resestipendium}{SEK 40,000}
+% \cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 45,000}
+%
+% \divider
+%
+% \cvachievement{2022}{}{}
+% \cvachievement{}{Rudbergs, A och M}{SEK 79,441}
+% \cvachievement{}{Bergmark Travel}{SEK 34,605}
+%
+% \divider
+%
+% \cvachievement{2021}{}{}
+% \cvachievement{}{Anna Maria Lundin Resestipendium}{SEK 38,680}
+%
+% \divider
+%
+% \cvachievement{2020}{}{}
+% \cvachievement{}{Sederholms, utrikes}{SEK 19,000}
 
 \end{paracol}
 \end{document}
